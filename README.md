@@ -122,13 +122,96 @@ REDIS_DB=
 
 Install gradle (on mac: https://gradle.org/install/)
 
+```
+brew install gradle
+```
+
 
 Install JDK (on mac: https://docs.oracle.com/javase/10/install/installation-jdk-and-jre-macos.htm)
 
 ``` sh
 export $(cat .env | xargs)
+```
+
+```
 gradle wrapper
+```
+```
+gradle wrapper
+
+Welcome to Gradle 6.8.3!
+
+Here are the highlights of this release:
+ - Faster Kotlin DSL script compilation
+ - Vendor selection for Java toolchains
+ - Convenient execution of tasks in composite builds
+ - Consistent dependency resolution
+
+For more details see https://docs.gradle.org/6.8.3/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+BUILD SUCCESSFUL in 29s
+1 actionable task: 1 executed
+```
+
+```
 ./gradlew build
+```
+```
+% ./gradlew build
+Downloading https://services.gradle.org/distributions/gradle-6.8.3-bin.zip
+..........10%..........20%..........30%...........40%..........50%..........60%..........70%...........80%..........90%..........100%
+Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+
+> Task :test
+2021-03-01 07:08:42.962  INFO 3624 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+BUILD SUCCESSFUL in 1m 13s
+12 actionable tasks: 12 executed
+ajeetraina@Ajeets-MacBook-Pro basic-redis-leaderboard-demo-java %
+```
+
+```
 ./gradlew run
 ```
+
+```
+./gradlew run
+
+> Task :run
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.1)
+
+2021-03-01 07:09:59.610  INFO 3672 --- [  restartedMain] BasicRedisLeaderLoardDemoJavaApplication : Starting BasicRedisLeaderLoardDemoJavaApplication using Java 13.0.2 on Ajeets-MacBook-Pro.local with PID 3672 (/Users/ajeetraina/projects/basic-redis-leaderboard-demo-java/build/classes/java/main started by ajeetraina in /Users/ajeetraina/projects/basic-redis-leaderboard-demo-java)
+2021-03-01 07:09:59.614  INFO 3672 --- [  restartedMain] BasicRedisLeaderLoardDemoJavaApplication : No active profile set, falling back to default profiles: default
+2021-03-01 07:09:59.661  INFO 3672 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-01 07:09:59.661  INFO 3672 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-01 07:10:00.481  INFO 3672 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-03-01 07:10:00.492  INFO 3672 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-01 07:10:00.492  INFO 3672 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-03-01 07:10:00.551  INFO 3672 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-01 07:10:00.551  INFO 3672 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 889 ms
+2021-03-01 07:10:00.756  INFO 3672 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 07:10:00.845  INFO 3672 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: URL [file:/Users/ajeetraina/projects/basic-redis-leaderboard-demo-java/assets/index.html]
+2021-03-01 07:10:00.949  INFO 3672 --- [  restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ea2d5326-b04c-4f93-b771-57bcb53f656e
+
+2021-03-01 07:10:01.016  INFO 3672 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@583fa06c, org.springframework.security.web.context.SecurityContextPersistenceFilter@524c0386, org.springframework.security.web.header.HeaderWriterFilter@c6e5d4e, org.springframework.security.web.authentication.logout.LogoutFilter@3e1f33e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6790427f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40ddf86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1412ffa9, org.springframework.security.web.session.SessionManagementFilter@3eb6c20f, org.springframework.security.web.access.ExceptionTranslationFilter@21646e94, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@649e1b25]
+2021-03-01 07:10:01.043  INFO 3672 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-01 07:10:01.065  INFO 3672 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-03-01 07:10:01.093  INFO 3672 --- [  restartedMain] BasicRedisLeaderLoardDemoJavaApplication : Started BasicRedisLeaderLoardDemoJavaApplication in 1.937 seconds (JVM running for 2.327)
+<=========----> 75% EXECUTING [17s]
+> :run
+
+```
+
+
 
