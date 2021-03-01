@@ -95,11 +95,28 @@ docker network create global
 docker-compose up -d --build
 ```
 
+```
+ docker-compose ps
+            Name                           Command               State             Ports          
+--------------------------------------------------------------------------------------------------
+redis.redisleaderboard.docker   docker-entrypoint.sh redis ...   Up      127.0.0.1:55000->6379/tcp
+
+```
+
 #### copy .env.example to create .env (copy .env.example .env  or cp .env.example .env) . And provide the values for environment variables (if needed)
    	- REDIS_HOST: Redis server host
 	- REDIS_PORT: Redis server port
 	- REDIS_DB: Redis server db index
 	- REDIS_PASSWORD: Redis server password
+
+```
+REDIS_URL=
+REDIS_HOST=redis://localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+REDIS_DB=
+```
+
 
 #### Run backend
 
